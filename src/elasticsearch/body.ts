@@ -294,6 +294,7 @@ export default class RequestBody {
   protected applyAggregations (): this {
     const filters = this.searchQuery.getAvailableFilters()
     const config = this.config.products
+    console.log('###### config', config)
     if (filters.length > 0) {
       for (let attribute of filters) {
         if (this.checkIfObjectHasScope({ object: attribute, scope: 'catalog' })) {
