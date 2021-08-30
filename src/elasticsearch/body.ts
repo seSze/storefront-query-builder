@@ -294,6 +294,7 @@ export default class RequestBody {
   protected applyAggregations (): this {
     const filters = this.searchQuery.getAvailableFilters()
     const config = this.config.products
+    // @ts-ignore
     console.log('###### config', config)
     if (filters.length > 0) {
       for (let attribute of filters) {
